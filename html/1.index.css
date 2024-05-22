@@ -8,16 +8,18 @@ body {
 img {
     width: 100%;
     height: 175px;
+    left: 0;
 }
 
 .sessao1 {
     background-color: #000000;
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    transform: translate(0%, 1%);
 }
 
 
@@ -28,7 +30,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: #666666 solid 3px;
 }
 
 .a_header {
@@ -37,7 +38,7 @@ img {
     align-items: center;
     flex-direction: row;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -49,7 +50,7 @@ img {
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     padding: 12px;
     width: 100px;
     transition: all 0.5s;
@@ -91,14 +92,14 @@ img {
 }
 
 .sessao2 img {
-    height: auto;
+    height: 100vh;
     width: 100%;
 }
 
 .sessao3 {
     position: absolute;
     width: 50%;
-    height: 200px;
+    height: 100vh;
     left: 0;
     padding: 8px;
 }
@@ -106,43 +107,73 @@ img {
 .sessao3 h1 {
     color: white;
     text-shadow: 8px 5px 5px #4d4a4ac0;
-    font-size: 35px;
-    transform: translate(10% , 40%);
+    font-size: 40px;
+    transform: translate(10%, 40%);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+
 }
 
 .sessao3 p {
     color: #828282;
-    font-size: 20px;
+    font-size: 25px;
     transform: translate(10%, 10%);
 }
 
 .sessao3 b {
-    color:#c6bed3;
-    font-size: 14px;
+    color: #c6bed3;
+    font-size: 19px;
     font-family: cursive;
 }
 
 
-.curiosidades{
+.curiosidades {
     background-color: #151515;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 100vh;
 }
+
 .curiosidades h1 {
     color: white;
     font-weight: bold;
-    transform: translate(3% , 10%);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-} 
+    transform: translate(6%, 10%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+
+}
 
 .curiosidades p {
     color: #828282;
-    font-size: 20px;
-    transform: translate(3%, 10%);
+    font-size: 30px;
+    transform: translate(6%, 10%);
 }
 
 
+html {
 
+    scroll-behavior: smooth;
+
+}
+
+
+.sessaoIMG1 {
+
+    display: inline-flex;
+    width: 100%;
+    height: 100vh;
+    transform: translate (0%, 10%);
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+.sessaoIMG1 .img1 {
+
+    display: inline-flex;
+    width: 100%;
+    height: 30vw;
+    transform: translate(0%, 10%);
+
+
+}
