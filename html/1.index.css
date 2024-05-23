@@ -198,3 +198,10 @@ html {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.imagem{
+
+    background-image: url(img/Carinha_Verde-removebg-preview.png);
+    background-image: url(img/Carinha_Amarela-removebg-preview.png);
+    background-image: url(img/Carinha_Vermelha-removebg-preview.png);
+
+}
