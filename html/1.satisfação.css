@@ -101,11 +101,12 @@ body {
     position: center;
     background: #000000e8;
     max-width: 360px;
-    padding: 45px;
+    padding: 70px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 15px;
-    transform: translate(100%, 10%);
+    transform: translate(0% , 10%);
+    
 }
 
 .form input {
@@ -143,7 +144,10 @@ body {
 
 .login-box {
     width: 100%;
-    height: 90vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .foto  {
@@ -154,3 +158,25 @@ align-self: center ;
 
 }
 
+.imagem{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 60px;
+    padding: 60px;
+}
+
+.botao {
+
+    background : #4b4b4b78;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 15px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer; 
+
+}
