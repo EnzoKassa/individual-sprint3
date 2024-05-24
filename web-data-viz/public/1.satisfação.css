@@ -211,6 +211,12 @@ align-self: center ;
     align-items: center;
     justify-content: center;
     display: flex;
-    gap: 60px;
+    gap: 40px;
     padding: 60px;
+}
+
+.div_msg1 {
+
+text-align:
+
 }
