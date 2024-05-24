@@ -55,9 +55,11 @@
     </div>
     
 </div>
-<div class="informcao">
-    <div id="div_msg1">
-       <h1> TESTE OI </h1>  
+<div class="informacao">
+    <div class="div_msg1" id="div_msg1">
+       <h1 id="positivo"></h1>
+       <h1 id="neutro"></h1>
+       <h1 id="negativo"></h1>  
     </div>
 
     
@@ -67,10 +69,24 @@
 </html>
 <script>
 
+    var cont1 = 0;
+    var cont2 = 0;
+    var cont3 = 0;
+
     function somar1() {
-
-
-
+        alert('Obrigado pelo feedback! ❤️')
+        cont1++;
+        positivo.innerHTML = `${cont1}`
+    }
+    function somar2() {
+        alert('Obrigado pelo feedback! ❤️')
+        cont2++;
+        neutro.innerHTML = `${cont2}`
+    }
+    function somar3() {
+        alert('Obrigado pelo feedback! ❤️')
+        cont3++;
+        negativo.innerHTML = `${cont3}`
     }
 
 </script>

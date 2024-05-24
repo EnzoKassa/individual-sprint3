@@ -39,7 +39,7 @@
             <form class="login-form">
                 <input id="input_email" type="text" placeholder="Email" />
                 <input id="input_senha" type="password" placeholder="Senha" />
-                <button> entrar </button>
+                <button onclick="entrar()"> entrar </button>
                 <p class="message"> Não tem conta? Cadastre-se <a href="cadastro.html">Crie uma conta</a></p>
             </form>
         </div>
@@ -50,7 +50,7 @@
 <script>
 
     function entrar() {
-        aguardar();
+       
 
         var emailVar = input_email.value;
         var senhaVar = input_senha.value;
@@ -83,11 +83,10 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
-                    setTimeout(function () {
-                        window.location = "login.html";
-                    }, 1000); // apenas para exibir o loading
+                    // setTimeout(function () {
+                    //     window.location = "login.html";
+                    // }, 1000); // apenas para exibir o loading
 
                 });
 

@@ -163,7 +163,7 @@ align-self: center ;
     justify-content: center;
     display: flex;
     gap: 60px;
-    padding: 60px;
+    height: 50vh;
 }
 
 .botao1 {
@@ -207,16 +207,28 @@ align-self: center ;
 
 }
 
-.informacao {
+/* .informacao {
     align-items: center;
     justify-content: center;
     display: flex;
     gap: 40px;
     padding: 60px;
+} */
+
+.informacao {
+
+align-items: center;
+display: flex;
+justify-content: center;
+width: 100%;
+
 }
 
 .div_msg1 {
+display: flex;
+gap: 240px;
+}
 
-text-align:
-
+.div_msg1 h1 {
+    margin: 0;
 }
