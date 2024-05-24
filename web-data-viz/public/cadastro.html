@@ -51,7 +51,7 @@
 <script>
 
     function cadastrar() {
-        
+
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
 
@@ -67,7 +67,12 @@
             confirmacaoSenhaVar == ""
         ) {
             alert('Preencha os campos corretamente');
-        } 
+        } else if (senhaVar !== confirmacaoSenhaVar) {
+
+            alert('As senhas estão diferentes')
+        } else if (emailVar.indexOf('@')== -1 || emailVar.indexOf('.com') == -1 ){
+            
+        }
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
