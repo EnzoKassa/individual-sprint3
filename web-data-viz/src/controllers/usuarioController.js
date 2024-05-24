@@ -1,5 +1,6 @@
 var usuarioModel = require("../models/usuarioModel");
-var aquarioModel = require("../models/aquarioModel");
+
+// const { json } = require("express");
 
 function autenticar(req, res) {
     var email = req.body.emailServer;
@@ -16,8 +17,8 @@ function autenticar(req, res) {
                 function (resultadoAutenticar) {
                     console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
                     console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+
                     if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
                         res.json({
                             id: resultadoAutenticar[0].idUsuario,
                             email: resultadoAutenticar[0].email,
