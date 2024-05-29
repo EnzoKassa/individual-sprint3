@@ -36,57 +36,119 @@
 </div>
 <div class="imagem">
     <div class="foto">
-        <button onclick="somar1()" class="botao1">
+        <button onclick="revelarInput() , avaliacaoPositiva() " class="botao1">
             <img src="img/Carinha_Verde-removebg-preview.png" alt="">
         </button>
     </div>
 
 
     <div class="foto">
-        <button onclick="somar2()" class="botao2">
+        <button onclick="revelarInput() , avaliacaoNeutra()" class="botao2">
             <img src="img/Carinha_Amarela-removebg-preview.png" alt="">
         </button>
     </div>
 
     <div class="foto">
-        <button onclick="somar3()" class="botao3">
+        <button onclick="revelarInput() , avaliacaoNegativa()" class="botao3">
             <img src="img/Carinha_Vermelha-removebg-preview.png" alt="">
         </button>
     </div>
-    
-</div>
-<div class="informacao">
-    <div class="div_msg1" id="div_msg1">
-       <h1 id="positivo"></h1>
-       <h1 id="neutro"></h1>
-       <h1 id="negativo"></h1>  
-    </div>
 
-    
 </div>
+<div id="informacao" style="display: none;" class="informacao">
+
+    <input type="text" id="input_avaliacao">
+    <button onclick="enviar()"> Enviar Pesquisa </button>
+
+</div>
+
 
 
 </html>
 <script>
 
-    var cont1 = 0;
-    var cont2 = 0;
-    var cont3 = 0;
 
-    function somar1() {
-        alert('Obrigado pelo feedback! ❤️')
-        cont1++;
-        positivo.innerHTML = `${cont1}`
+    var tipoAvaliacao = '';
+
+    function revelarInput() {
+
+        informacao.style = `display: flex`
+
     }
-    function somar2() {
-        alert('Obrigado pelo feedback! ❤️')
-        cont2++;
-        neutro.innerHTML = `${cont2}`
+
+    function avaliacaoPositiva() {
+
+        tipoAvaliacao = 'pos';
+
     }
-    function somar3() {
-        alert('Obrigado pelo feedback! ❤️')
-        cont3++;
-        negativo.innerHTML = `${cont3}`
+    function avaliacaoNeutra() {
+
+        tipoAvaliacao = 'neu';
+
     }
+    function avaliacaoNegativa() {
+
+        tipoAvaliacao = 'neg';
+
+    }
+
+    function enviar() {
+
+        var avaliacao = input_avaliacao.value;
+        var fkUsuario = sessionStorage.idUsuario;
+
+        if (avaliacao == "") {
+
+            alert(' Por favor preencha o campo com a sua avaliação ')
+
+        } else if (fkUsuario == undefined) {
+            setTimeout(function () {
+                window.location = "./login.html";
+            }, 1000);
+        }
+        else if (avaliacao.length >= 50) {
+
+            fetch("/pesquisas/avaliacao", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    avaliacaoServer: avaliacao,
+                    pesquisaServer: tipoAvaliacao,
+                    fkUsuarioServer: fkUsuario,
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+                        alert('Pesquisa realizada com sucesso! Muito Obrigado');
+
+
+                    } else {
+                        throw "Houve um erro ao tentar realizar a pesquisa.!";
+                    }
+                })
+                .catch(function (resposta) {
+
+                    console.log(`#ERRO: ${resposta}`);
+
+                });
+
+            return false;
+
+
+        } else {
+            alert(' Preencha com pelo menos 50 caracteres ')
+        }
+
+
+
+    }
+
+
 
 </script>

@@ -8,7 +8,11 @@ function pesquisar()
     return database.executar(instrucaoSql)
 }
 
+function avaliacao(avaliacao , pesquisa , fkUsuario) {
 
+    var instrucaoSql = ` INSERT INTO Pesquisa (avaliacao, satisfacao, fkUsuario) VALUES ('${avaliacao}' , '${pesquisa}' , ${fkUsuario})`
+    
+}
 module.exports = {
     pesquisar
 }
