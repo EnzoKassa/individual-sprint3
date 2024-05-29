@@ -102,11 +102,12 @@
             alert(' Por favor preencha o campo com a sua avaliação ')
 
         } else if (fkUsuario == undefined) {
+            alert('você não realizou o login.. redirecionando para tela de login')
             setTimeout(function () {
                 window.location = "./login.html";
-            }, 1000);
+            }, 1500);
         }
-        else if (avaliacao.length >= 50) {
+        else if (avaliacao.length >= 30) {
 
             fetch("/pesquisas/avaliacao", {
                 method: "POST",
