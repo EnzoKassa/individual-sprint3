@@ -156,7 +156,7 @@ img {
 html {
 
     scroll-behavior: smooth;
-    font-size: 20px;
+    font-size: 30px;
 
 }
 
@@ -234,4 +234,14 @@ html {
 .filhaIMG2 {
     padding: 30px;
     width: 50%;
+}
+
+.a_link {
+
+    display: flex;
+    justify-content: center ;
+    border-radius: 3px solid white;
+    border: 3px;
+    text-decoration: none;
+
 }
