@@ -64,9 +64,9 @@
 </div>
 
 <div class="dash">
-    <div class="myChartCanvas1">
-        <p style="color: white;"> Gráfico </p>
-        <canvas id="myChart"></canvas>
+    <div class="">
+        <p style="color: rgb(255, 255, 255);"> Gráfico </p>
+        <canvas id="myChartCanvas1"></canvas>
     </div>
 </div>
 
@@ -187,7 +187,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, satisfacao) {
+    function plotarGrafico(resposta) {
 
         console.log('iniciando plotagem do gráfico...');
 
@@ -199,23 +199,24 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Satisfação',
+                label: '',
                 data: [0, 0, 0],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: 'rgb(255, 255, 255)',
                 tension: 0.1
             }]
         };
+        console.log(resposta)
 
         for (let index = 0; index < resposta.length; index++) {
-            let registro = resposta[index].satisfacao;
-            if (registro === 'pos') {
-                dados.datasets[0].data[0]++; // Incrementa o valor da categoria 'Positivo'
-            } else if (registro === 'neu') {
-                dados.datasets[0].data[1]++; // Incrementa o valor da categoria 'Neutro'
-            } else if (registro === 'neg') {
-                dados.datasets[0].data[2]++; // Incrementa o valor da categoria 'Negativo'
-            }
+            let registro = resposta[index];
+            
+                dados.datasets[0].data[0] += (registro.quantidade); 
+           
+                dados.datasets[0].data[1] += (registro.quantidade); 
+           
+                dados.datasets[0].data[2] += (registro.quantidade); 
+           
         }
 
         // Criando estrutura para plotar gráfico - config
