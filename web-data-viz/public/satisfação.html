@@ -210,6 +210,13 @@
 
         for (let index = 0; index < resposta.length; index++) {
             let registro = resposta[index];
+
+                labels.push(registro.satisfacao);
+                if (registro.quantidade == 'pos'){
+                    dados.datasets[0].data.push(registro.quantidade)
+                    dados.datasets[0].backgrounColor.push('green')
+                    
+                } 
             
                 dados.datasets[0].data[0] += (registro.quantidade); 
            
