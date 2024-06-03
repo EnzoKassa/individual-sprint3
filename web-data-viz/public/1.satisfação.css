@@ -207,13 +207,7 @@ align-self: center ;
 
 }
 
-/* .informacao {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    gap: 40px;
-    padding: 60px;
-} */
+
 
 .informacao {
 
@@ -232,3 +226,4 @@ gap: 240px;
 .div_msg1 h1 {
     margin: 0;
 }
+
