@@ -105,8 +105,8 @@ body {
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 15px;
-    transform: translate(0% , 10%);
-    
+    transform: translate(0%, 10%);
+
 }
 
 .form input {
@@ -147,18 +147,18 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    
-}
-
-.foto  {
-
-display: inline-flex;
-justify-content: space-between;
-align-self: center ;
 
 }
 
-.imagem{
+.foto {
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-self: center;
+
+}
+
+.imagem {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -168,7 +168,7 @@ align-self: center ;
 
 .botao1 {
 
-    background : #47b372a4;
+    background: #47b372a4;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -177,11 +177,13 @@ align-self: center ;
     border-radius: 15px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
-    cursor: pointer; 
+    cursor: pointer;
 
-}.botao2 {
+}
 
-    background : #fdd123a4;
+.botao2 {
+
+    background: #fdd123a4;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -190,11 +192,13 @@ align-self: center ;
     border-radius: 15px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
-    cursor: pointer; 
+    cursor: pointer;
 
-}.botao3 {
+}
 
-    background : #e62424a4;
+.botao3 {
+
+    background: #e62424a4;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -203,7 +207,7 @@ align-self: center ;
     border-radius: 15px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
-    cursor: pointer; 
+    cursor: pointer;
 
 }
 
@@ -211,25 +215,91 @@ align-self: center ;
 
 .informacao {
 
-align-items: center;
-display: flex;
-justify-content: center;
-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.informacao input {
+    outline: 0;
+    background: #ffffff;
+    width: 30%;
+    height: 40px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+
+.informacao button {
+
+    border-radius: 30px;
+    background-color: #CC0000;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 12px;
+    cursor: pointer;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .div_msg1 {
-display: flex;
-gap: 240px;
+    display: flex;
+    gap: 240px;
 }
 
 .div_msg1 h1 {
     margin: 0;
 }
 
-.myChartCanvas1 {
+.grafico {
 
-    height: 50vh;
+    height: 80vh;
     width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
 
+.imagem button {
+
+    border: rgb(0, 0, 0) solid 3px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+
+
+
+}
+
+.foto .botao1:hover {
+
+    background-color: #548249;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transform: translate(0px, -5px);
+    transition: transform 0.5s;
+}
+
+.foto .botao2:hover {
+
+    background-color: #b7981ca4;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transform: translate(0px, -5px);
+    transition: transform 0.5s;
+
+}
+
+.foto .botao3:hover {
+
+    background-color: #a50202;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transform: translate(0px, -5px);
+    transition: transform 0.5s;
 }
