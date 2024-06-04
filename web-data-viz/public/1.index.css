@@ -59,7 +59,7 @@ img {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .b_header span {
