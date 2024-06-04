@@ -29,7 +29,7 @@
 
 <div class="login-box">
     <div class="form">
-        <p style="color: white;"> Como foi sua Experiencia no site? </p>
+        <p style="color: white;"> Olá Como foi sua Experiencia no site? </p>
         <form class="login-form">
 
         </form>
@@ -160,7 +160,6 @@
 
     }
 
-    var lista_dados = [];
     function obterDadosGrafico() {
 
 
@@ -189,8 +188,6 @@
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta) {
 
-        console.log('iniciando plotagem do gráfico...');
-
 
         // Criando estrutura para plotar gráfico - labels
         const labels = ["Positivo", "Neutro", "Negativo"];
@@ -200,11 +197,11 @@
             labels: labels,
             datasets: [{
                 label: 'Avaliações',
-                data: [0, 0, 0], // Inicializando com zeros
+                data: [0 , 0 , 0], // Inicializando com zeros
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.2)', // Verde
-                    'rgba(255, 206, 86, 0.2)',  // Amarelo
-                    'rgba(255, 99, 132, 0.2)',  // Vermelho
+                    'rgba(75, 192, 192, 0.5)', // Verde
+                    'rgba(255, 206, 86, 0.5)',  // Amarelo
+                    'rgba(255, 99, 132, 0.5)',  // Vermelho
                 ],
                 borderColor: [
                     'rgba(75, 192, 192, 1)',
@@ -215,17 +212,18 @@
             }]
         };
         console.log(resposta)
+        console.log('iniciando plotagem do gráfico...');
+
 
         for (let index = 0; index < resposta.length; index++) {
+            console.log(JSON.stringify(dados));
             let registro = resposta[index];
 
-            resposta[index].
+            dados.datasets[0].data[0]++;
 
-            dados.datasets[0].data[0] = (registro.quantidade);
+            dados.datasets[0].data[1]++;
 
-            dados.datasets[0].data[1] = (registro.quantidade);
-
-            dados.datasets[0].data[2] = (registro.quantidade);
+            dados.datasets[0].data[2]++;
 
         }
 

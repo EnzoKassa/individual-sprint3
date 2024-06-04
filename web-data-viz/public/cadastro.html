@@ -36,13 +36,13 @@
     <div class="login-box">
         <div class="form">
             <p style="color: white;"> Cadastro </p>
-            <form class="login-form">
+            <div class="login-form">
                 <input type="text" id="input_nome" placeholder="Nome">
                 <input type="text" id="input_email" placeholder="Email" />
                 <input type="password" id="input_senha" placeholder="Senha" />
                 <input type="password" id="input_confirmeSenha" placeholder="Confirme a Senha">
                 <button onclick="cadastrar()"> cadastrar </button>
-            </form>
+            </div>
         </div>
     </div>
 </body>
@@ -71,8 +71,8 @@
 
             alert('As senhas estão diferentes')
         } else if (emailVar.indexOf('@')== -1 || emailVar.indexOf('.com') == -1 ){
-            
-        }
+          
+        } return;
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -96,7 +96,7 @@
 
                     setTimeout(() => {
                         window.location = "login.html";
-                    }, "2000");
+                    }, "500");
 
                 } else {
                     throw "Houve um erro ao tentar realizar o cadastro!";
