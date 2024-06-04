@@ -186,58 +186,53 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+
+    var dadosSatisfacao = []
     function plotarGrafico(resposta) {
 
 
-        // Criando estrutura para plotar gráfico - labels
-        const labels = ["Positivo", "Neutro", "Negativo"];
-
-        // Criando estrutura para plotar gráfico - dados
-        const dados = {
-            labels: labels,
-            datasets: [{
-                label: 'Avaliações',
-                data: [0 , 0 , 0], // Inicializando com zeros
-                backgroundColor: [
-                    'rgba(75, 192, 192, 0.5)', // Verde
-                    'rgba(255, 206, 86, 0.5)',  // Amarelo
-                    'rgba(255, 99, 132, 0.5)',  // Vermelho
-                ],
-                borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(255, 99, 132, 1)',
-                ],
-                borderWidth: 1
-            }]
-        };
         console.log(resposta)
         console.log('iniciando plotagem do gráfico...');
 
 
         for (let index = 0; index < resposta.length; index++) {
-            console.log(JSON.stringify(dados));
-            let registro = resposta[index];
-
-            dados.datasets[0].data[0]++;
-
-            dados.datasets[0].data[1]++;
-
-            dados.datasets[0].data[2]++;
-
+            console.log(JSON.stringify(resposta));
+            let registro = resposta[index].quantidade;
+            dadosSatisfacao.push(registro)
         }
 
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: dados,
-        };
 
-        // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById(`myChartCanvas1`),
-            config
-        );
+        const ctx = document.getElementById('myChartCanvas1');
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Positivo', 'Neutro', 'Negativo'],
+                datasets: [{
+                    label: '',
+                    data: dadosSatisfacao,
+                    backgroundColor: [
+                        'rgba(71,179,119,255)', // Verde
+                        'rgba(253,210,35,255)',  // Amarelo
+                        'rgba(230,36,37,255)    ',  // Vermelho
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
 
     }
 
