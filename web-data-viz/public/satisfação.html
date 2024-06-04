@@ -193,17 +193,25 @@
 
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = ["Positivo", "Neutro", "Negativo"];
+        const labels = ["Positivo", "Neutro", "Negativo"];
 
         // Criando estrutura para plotar gráfico - dados
-        let dados = {
+        const dados = {
             labels: labels,
             datasets: [{
-                label: '',
-                data: [0, 0, 0],
-                fill: false,
-                borderColor: 'rgb(255, 255, 255)',
-                tension: 0.1
+                label: 'Avaliações',
+                data: [0, 0, 0], // Inicializando com zeros
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)', // Verde
+                    'rgba(255, 206, 86, 0.2)',  // Amarelo
+                    'rgba(255, 99, 132, 0.2)',  // Vermelho
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
             }]
         };
         console.log(resposta)
@@ -211,19 +219,14 @@
         for (let index = 0; index < resposta.length; index++) {
             let registro = resposta[index];
 
-                labels.push(registro.satisfacao);
-                if (registro.quantidade == 'pos'){
-                    dados.datasets[0].data.push(registro.quantidade)
-                    dados.datasets[0].backgrounColor.push('green')
-                    
-                } 
-            
-                dados.datasets[0].data[0] += (registro.quantidade); 
-           
-                dados.datasets[0].data[1] += (registro.quantidade); 
-           
-                dados.datasets[0].data[2] += (registro.quantidade); 
-           
+            resposta[index].
+
+            dados.datasets[0].data[0] = (registro.quantidade);
+
+            dados.datasets[0].data[1] = (registro.quantidade);
+
+            dados.datasets[0].data[2] = (registro.quantidade);
+
         }
 
         // Criando estrutura para plotar gráfico - config
