@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="857904da-2a7e-421f-b577-cbb0a9cad506" name="Changes" comment="" />
+    <list default="true" id="857904da-2a7e-421f-b577-cbb0a9cad506" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mocuti01/dto/CadastroUsuarioRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mocuti01/dto/RelatorioGenero.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mocuti01/controller/UsuarioJpaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mocuti01/controller/UsuarioJpaController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mocuti01/entity/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mocuti01/entity/Usuario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mocuti01/repository/UsuarioRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mocuti01/repository/UsuarioRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +26,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EnzoKassa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EnzoKassa/individual-sprint3.git&quot;,
+    &quot;accountId&quot;: &quot;e2448f7d-f192-4d8d-a376-d78131f01b00&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -28,13 +51,16 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Kotlin.ProjetoMocutiApplicationKt (1).executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.ProjetoMocutiApplicationKt.executor&quot;: &quot;Run&quot;,
     &quot;Maven.projeto-mocuti-jpa [clean].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/enzob/Documents/Enzo/SPTech/1º SEM/Prog Web/mocuti-usuario/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/enzob/Documents/Enzo/SPTech/1º ANO - 2024/1ª SEM/Projeto Individual/individual-sprint3/mocuti-usuario/pom.xml&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -45,8 +71,14 @@
       <recent name="C:\Users\enzob\Downloads\mocuti-usuario\src\main\kotlin" />
       <recent name="C:\Users\enzob\Downloads\mocuti-usuario\src\main\resources" />
     </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="mocuti01.controller" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="Entity" />
+    </key>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="mocuti01.dto" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.ProjetoMocutiApplicationKt (1)">

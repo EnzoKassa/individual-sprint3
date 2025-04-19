@@ -18,7 +18,7 @@ data class Usuario(
 
     @field:NotBlank @field:Email @field:Size(max = 45) var email: String,
 
-    @field:Past var dataNascimento: LocalDate,
+    @field:Past var dataNascimento: LocalDate?,
 
     @field:Size(max = 45) var genero: String? = null,
 
@@ -30,17 +30,16 @@ data class Usuario(
 
     @JsonIgnore var dtDesativacao: LocalDate? = null,
 
-    @Column(name = "cargo_int", nullable = false)
-    var cargoInt: Int? = null
+    @Column(name = "cargo_int", nullable = false) var cargoInt: Int? = null,
 
-//    @Column(name = "fkCargo", nullable = false)
-//    var fkCargo: Int? = null,
+    @field:PositiveOrZero @Column(name = "fk_endereco_usuario", nullable = true)
+    var fkEnderecoUsuario: Int? = null,
 
-) {
-    constructor() : this(
-        null, "", "", null, "", LocalDate.now(), null, "",
-        false, true, null,
+    @field:PositiveOrZero @Column(name = "fk_canal_comunicacao_usuario", nullable = true)
+    var fkCanalComunicacaoUsuario: Int? = null,
+
     ) {
+    constructor() : this(null, "", "", null, "", null, null, "", false, true, null, null) {
         this.dtDesativacao = null
     }
 }

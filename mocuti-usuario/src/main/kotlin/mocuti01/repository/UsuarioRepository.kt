@@ -24,4 +24,10 @@ interface UsuarioRepository : JpaRepository<Usuario, Int> {
 
     @Query("select u from Usuario u where u.cargoInt = ?1")
     abstract fun findByCargoInt(cargoInt: Int): List<Usuario>?
+
+    @Query("select count(u) > 0 from Usuario u where u.cpf = ?1")
+    fun existsByCpf(cpf: String): Boolean
+
+    @Query("select u.genero, count(u) from Usuario u where u.genero in ('Masculino', 'Feminino') group by u.genero")
+    fun countByGenero(string: String): List<Array<Any>>
 }
